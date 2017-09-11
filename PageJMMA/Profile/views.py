@@ -20,3 +20,6 @@ class LanguagesPageView(TemplateView):
 
 class VideosPageView(TemplateView):
     template_name = 'videos.html'
+
+class CurriculumPageView(TemplateView):
+    template_name = 'curriculum.html'
