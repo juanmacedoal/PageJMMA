@@ -19,9 +19,8 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card-2">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BACKGROUNDS</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CURRICULUM</a>
+    <a href="/index/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#articles" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTICLES</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">CATEGORIES<i class="fa fa-caret-down"></i></button>     
@@ -77,61 +76,102 @@ body {font-family: "Lato", sans-serif}
   
 
   <!-- The Topics Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide"><img src="{% static "/images/logo.jpg" %}" width="30%" height="%30"></h2>
-    <p class="w3-opacity"><i>Venezuelan Developer</i></p>
-    <p class="w3-justify">Like a whole bunch of developer in the world I'm just one more, with the plus that the life i had make me flexible to difficult situations, give me more ideas, more ways to develop that ideas. All decisions, all failures and all steps we passed defines as the people we are.</p>
+<div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+    <div class="w3-half">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+            <h2 class="w3-wide"><img src="{% static "/images/languages.jpg" %}" width="70%" height="%70"></h2>
+            <p class="w3-opacity"><i>10 Most Popular Programming Languages Today<a href="/languages_article/" ></i></p>
+            <p class="w3-justify">Programmers are in high demand these days--their fluency in coding language is invaluable. 
+                Knowing various programming languages is a no-brainer for engineers, but a basic understanding of the languages
+                can benefit anyone, even if you're not looking to become a master coder. Grasping some general understanding of
+                coding can help you make the right hires for your business needs, communicate better with the engineers on your
+                team, and prevent any awkward misunderstandings (Ruby isn't a gem, and Java isn't an excellent cup of coffee). 
+                Plus, with the high salaries earned for coding, you might want to consider it for a future career move! 
+                So what do you need to know?<a href="/languages_article/"></p>
+                
+            <p>Here are the 10 most popular programming languages:
+                <a href="/languages_article/" >
+                    <i class="fa fa-external-link w3-hover-opacity">
+                    </i>
+                </a>
+            </p>
+          </div>
+    </div>
+    <div class="w3-half">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+            <h2 class="w3-wide"><img src="{% static "/images/frameworks2017.png" %}" width="62%" height="%70"></h2>
+            <p class="w3-opacity"><i>7 Best Frameworks For Web Development in 2017<a href="/languages_article/"></i></p>
+            <p class="w3-justify">Most of modern web developers have own list of frameworks and libraries which make their
+               work faster, more efficient and convenient. These are the tools they are used to work with and like. But 
+               building an edge over others necessitates every self-respecting programmer to be aware of latest web development
+                technologies, new web application frameworks and libraries and implement them. A successful and productive 
+                developer has to be fast, reliable and use best practices to save time on things that can be automated. 
+                Deadlines matter for business. In this article I will discuss some web development trends in 2017, specifically 
+                the most popular web frameworks of the year, some of their features and their pros and cons. Hopefully this will 
+                help influence what to choose for practice and work.<a href="/languages_article/"></p>
+                
+            <p>Here are the 7 most popular programming frameworks:
+                <a href="/languages_article/" >
+                    <i class="fa fa-external-link w3-hover-opacity">
+                    </i>
+                </a>
+            </p>
+          </div>
+    </div>
   </div>
 
   <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">CURRICULUM</h2>
-      <p class="w3-opacity w3-center"><i></i></p><br>
-      <h3 class="w3-wide w3-center">Skills Programming</h2>
-      <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">AngularJS <span class="w3-tag w3-red w3-margin-left">Level ****</span></li>
-        <li class="w3-padding">Android Studio <span class="w3-tag w3-red w3-margin-left"></span></li>
-        <li class="w3-padding">Java <span class="w3-badge w3-right w3-margin-right">Level ****</span></li>
-      </ul>
-
-      <h3 class="w3-wide w3-center">Languages</h2>
-        <ul class="w3-ul w3-border w3-white w3-text-grey">
-          <li class="w3-padding">Spanish <span class="w3-tag w3-red w3-margin-left">******</span></li>
-          <li class="w3-padding">English <span class="w3-tag w3-red w3-margin-left"></span></li>
-        </ul>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="{% static "/images/ucab.jpg" %}" alt="Ucab" style="width:100%" height="160" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Universidad Catolica Andres Bello</b></p>
-            <p class="w3-opacity"> Since September 2011</p>
-            <p>Actually in 10 semester of my carreer of Informatics Engineering</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See info</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="{% static "/images/cva.jpg" %}" alt="Cva" style="width:100%" height="160" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Centro Venezolano Americano</b></p>
-            <p class="w3-opacity">Jan 2010 to Jan 2011</p>
-            <p>Cultural Center to learn or study English.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See info</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="{% static "/images/benllinsoft.jpg" %}" alt="Benllisoft" style="width:100%" height="160" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Benllisoft</b></p>
-            <p class="w3-opacity">Feb 2012</p>
-            <p>Course of C++</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See info</button>
-          </div>
-        </div>
+  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+      <div class="w3-half">
+          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+              <h2 class="w3-wide"><img src="{% static "/images/programmingbeginner.jpg" %}" width="40%" height="%50"></h2>
+              <p class="w3-opacity"><i>What Programming Language Should a Beginner Learn in 2017?<a href="/languages_article/" ></i></p>
+              <p class="w3-justify">It’s not news that STEM talents are in great demand and are paid well. Online postings for software jobs 
+                across the U.S. grew 31% from 2007 to 2012 - nearly 3x faster than overall job postings. The US Bureau of Labor Statistics 
+                estimates software developer jobs to continue to grow at 22% from 2012~2022, with a median pay of $100,080 for software app 
+                developers as of May 2016.
+                  
+                  If you’re looking to learn how to code, the sheer number of programming languages may be overwhelming – what language should 
+                  you indeed learn? This article hopes to give you some pointers by comparing the salary, popularity, and prospective future 
+                  associated with different programming languages.<a href="/languages_article/"></p>
+                  
+              <p>Here are the 10 most popular programming languages:
+                  <a href="/languages_article/" >
+                      <i class="fa fa-external-link w3-hover-opacity">
+                      </i>
+                  </a>
+              </p>
+            </div>
+      </div>
+      <div class="w3-half">
+          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+              <h2 class="w3-wide"><img src="{% static "/images/python.png" %}" width="62%" height="%70"></h2>
+              <p class="w3-opacity"><i>How I Learned Python Programming Language<a href="/languages_article/"></i></p>
+              <p class="w3-justify">I had taken several programming classes in college (C, C++, and Java) but nothing really serious. 
+                I’m not a Computer Science major and I’ve only programmed professionally for the last year.
+                  
+                  I didn’t really like the low-level work involved with C/C++. Things like pointers, memory
+                  management, and other concepts were difficult for me to grasp — much less effectively
+                  use. Java, as my first programming class in school, didn’t make any sense. I had never used
+                  an object-oriented language before and object-oriented programming (OOP) concepts gave me fits.
+                  
+                  These problems while learning to program left a bad taste in my mouth for programming in general. 
+                  I never learned a language well enough to feel comfortable using it, much less
+                  actually enjoy programming. Then, I heard about Python on a computer forum and noticed several 
+                  other mentions of the language at other sites around the Internet. People
+                  were talking about how great the language was for personal projects and how versatile it
+                  was. I decided to give programming one more try and see if Python was the language for
+                  me.<a href="/languages_article/"></p>
+                  
+              <p>Here are the 7 most popular programming frameworks:
+                  <a href="/languages_article/" >
+                      <i class="fa fa-external-link w3-hover-opacity">
+                      </i>
+                  </a>
+              </p>
+            </div>
       </div>
     </div>
-  </div>
 
   <!-- Ticket Modal -->
   <div id="ticketModal" class="w3-modal">
@@ -182,33 +222,9 @@ body {font-family: "Lato", sans-serif}
   
 <!-- End Page Content -->
 </div>
-<!-- Add Google Maps -->
-<div id="googleMap" style="height:400px;" class="w3-grayscale-max">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125549.02138144325!2d-66.9604061535986!3d10.468552911150889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C+Capital+District!5e0!3m2!1sen!2sve!4v1504814188903" 
-        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
-        </iframe>
-</div>
 <script>
-function myMap() {
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
 </script>
-
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
