@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
-<title>JMMA</title>
+    {% load static %}
+    <head>
+        <link rel="shortcut icon" type="image/png" href="{% static "images/favico.ico" %}" />
+        <title src=>JMMA</title>
+    </head>
+
   <!-- Django load Images -->
-  {% load static %}
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -30,7 +35,6 @@ body {font-family: "Lato", sans-serif}
         <a href="/projects/" class="w3-bar-item w3-button">PROJECTS</a>
         <a href="/tutorials/" class="w3-bar-item w3-button">TUTORIALS</a>
         <a href="/articles/" class="w3-bar-item w3-button">RECOMMENDED ARTICLES</a>
-        <a href="/languages/" class="w3-bar-item w3-button">RECOMMENDED LANGUAGE</a>
         <a href="/videos/" class="w3-bar-item w3-button">VIDEOS</a>
       </div>
     </div>
@@ -50,17 +54,17 @@ body {font-family: "Lato", sans-serif}
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center" class="swipe">
-    <img src="{% static "/images/android.png" %}"style="width:100%" height="500">
+    <img src="{% static "images/android.png" %}"style="width:100%" height="500">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center" class="swipe">
-    <img src="{% static "/images/code1.jpg" %}"  width="100%" height="500">
+    <img src="{% static "images/code1.jpg" %}"  width="100%" height="500">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center" class="swipe">
-    <img src="{% static "/images/angular.jpg" %}" style="width:100%" height="500">
+    <img src="{% static "images/angular.jpg" %}" style="width:100%" height="500">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"> 
     </div>
   </div>
@@ -149,6 +153,7 @@ body {font-family: "Lato", sans-serif}
           </div>
         </div>
       </div>
+    </div>
     </div>
 
 

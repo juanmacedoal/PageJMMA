@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+    {% load static %}
+    <head>
+        <link rel="shortcut icon" type="image/png" href="{% static "images/favico.ico" %}" />
+        <title src=>JMMA</title>
+    </head>
   <!-- Django load Images -->
   {% load static %}
 <meta charset="UTF-8">
@@ -29,7 +33,6 @@ body {font-family: "Lato", sans-serif}
         <a href="/projects/" class="w3-bar-item w3-button">PROJECTS</a>
         <a href="/tutorials/" class="w3-bar-item w3-button">TUTORIALS</a>
         <a href="/articles/" class="w3-bar-item w3-button">RECOMMENDED ARTICLES</a>
-        <a href="/languages/" class="w3-bar-item w3-button">RECOMMENDED LANGUAGE</a>
         <a href="/videos/" class="w3-bar-item w3-button">VIDEOS</a>
       </div>
     </div>
@@ -60,22 +63,22 @@ body {font-family: "Lato", sans-serif}
       <p class="w3-opacity w3-center"><i></i></p><br>
       <h3 class="w3-wide w3-center">Skills Programming</h2>
       <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">AngularJS <span class="w3-tag w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
+        <li class="w3-padding">AngularJS <span class="w3-badge w3-right w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
           <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i>
           <i class="fa fa-asterisk" aria-hidden="true"></i></span></li>
-        <li class="w3-padding">Android Studio <span class="w3-tag w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
+        <li class="w3-padding">Android Studio <span class="w3-badge w3-right w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
           <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i>
           <i class="fa fa-asterisk" aria-hidden="true"></i></span></li>
-        <li class="w3-padding">Java <span class="w3-tag w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
+        <li class="w3-padding">Java <span class="w3-badge w3-right w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
           <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i>
           <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i></span></li>
-          <li class="w3-padding">Html<span class="w3-tag w3-red w3-margin-left"><i class="fa fa-asterisk" aria-hidden="true"></i>
+          <li class="w3-padding">Html<span class="w3-badge w3-right w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
             <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i>
           </span></li>
-          <li class="w3-padding">Android Studio <span class="w3-tag w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
+          <li class="w3-padding">Android Studio <span class="w3-badge w3-right w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
             <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i>
             <i class="fa fa-asterisk" aria-hidden="true"></i></span></li>
-          <li class="w3-padding">Java <span class="w3-tag w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
+          <li class="w3-padding">Java <span class="w3-badge w3-right w3-red w3-margin-right"><i class="fa fa-asterisk" aria-hidden="true"></i>
             <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i>
             <i class="fa fa-asterisk" aria-hidden="true"></i><i class="fa fa-asterisk" aria-hidden="true"></i></span></li>
       </ul>
@@ -86,35 +89,35 @@ body {font-family: "Lato", sans-serif}
           <li class="w3-padding">English <span class="w3-tag w3-red w3-margin-left"></span></li>
         </ul>
 
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="{% static "/images/ucab.jpg" %}" alt="Ucab" style="width:100%" height="160" class="w3-hover-opacity">
-          <div class="w3-container w3-white" >
-            <p><b>Universidad Catolica Andres Bello</b></p>
-            <p class="w3-opacity"> Since September 2011</p>
-            <p>Actually in 10 semester of my carreer of Informatics Engineering</p>
-          <a href="http://w2.ucab.edu.ve/escueladeingenierainformatica.html"><button class="w3-button w3-black w3-margin-bottom" >See info</button></a>
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+            <div class="w3-third w3-margin-bottom">
+              <img src="{% static "/images/ucab.jpg" %}" alt="Ucab" style="width:100%" height="160" class="w3-hover-opacity">
+              <div class="w3-container w3-white" >
+                <p><b>Universidad Catolica Andres Bello</b></p>
+                <p class="w3-opacity"> Since September 2011</p>
+                <p>Actually in 10 semester of my carreer of Informatics Engineering</p>
+              <a href="http://w2.ucab.edu.ve/escueladeingenierainformatica.html"><button class="w3-button w3-black w3-margin-bottom" >See info</button></a>
+              </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+              <img src="{% static "/images/cva.jpg" %}" alt="Cva" style="width:100%" height="160" class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                <p><b>Centro Venezolano Americano</b></p>
+                <p class="w3-opacity" style="padding-top: 22px">Jan 2010 to Jan 2011</p>
+                <p style="padding-bottom: 22px;">Cultural Center to learn or study English.</p>
+              <a href="https://cvalasmercedes.wordpress.com/"> <button class="w3-button w3-black w3-margin-bottom" >See info</button></a>
+              </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+              <img src="{% static "/images/benllinsoft.jpg" %}" alt="Benllisoft" style="width:100%" height="160" class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                <p><b>Benllisoft</b></p>
+                <p class="w3-opacity" style="padding-top: 22px">Feb 2012</p>
+                <p style="padding-bottom: 44px;">Course of C++</p>
+                <a href="http://www.benllisoft.com/website/"><button class="w3-button w3-black w3-margin-bottom"  >See info</button></a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="{% static "/images/cva.jpg" %}" alt="Cva" style="width:100%" height="160" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Centro Venezolano Americano</b></p>
-            <p class="w3-opacity" style="padding-top: 15px">Jan 2010 to Jan 2011</p>
-            <p style="padding-bottom: 21px;">Cultural Center to learn or study English.</p>
-          <a href="https://cvalasmercedes.wordpress.com/"> <button class="w3-button w3-black w3-margin-bottom" >See info</button></a>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="{% static "/images/benllinsoft.jpg" %}" alt="Benllisoft" style="width:100%" height="160" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Benllisoft</b></p>
-            <p class="w3-opacity" style="padding-top: 22px">Feb 2012</p>
-            <p style="padding-bottom: 44px;">Course of C++</p>
-            <a href="http://www.benllisoft.com/website/"><button class="w3-button w3-black w3-margin-bottom"  >See info</button></a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
