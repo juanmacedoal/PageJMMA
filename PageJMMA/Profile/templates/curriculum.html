@@ -5,55 +5,6 @@
 {% block tab2 %}  {% endblock %}
 
 {% load static %}
-  <!-- Django load Images 
-<!DOCTYPE html>
-<html>
-    {% load static %}
-    <head>
-        <link rel="shortcut icon" type="image/png" href="{% static "images/favico.ico" %}" />
-        <title src=>JMMA</title>
-    </head>
-
-  {% load static %}
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="{% static "/css/index.css" %}">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-<body>
-
-<!-- Navbar 
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card-2">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="/index/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SKILLS</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">CATEGORIES<i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="/projects/" class="w3-bar-item w3-button">PROJECTS</a>
-        <a href="/tutorials/" class="w3-bar-item w3-button">TUTORIALS</a>
-        <a href="/articles/" class="w3-bar-item w3-button">RECOMMENDED ARTICLES</a>
-        <a href="/videos/" class="w3-bar-item w3-button">VIDEOS</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Navbar on small screens 
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large">BACKGROUNDS</a>
-  <a href="/curriculum/" class="w3-bar-item w3-button w3-padding-large">CURRICULUM</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">CATEGORIES</a>
-</div>
--->
 
 {% block body %}
 <!-- Page content -->
@@ -142,17 +93,19 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: juanmacedoal@gmail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
+        <form method="POST" action="" role="form">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            <div class="w3-half">               
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="contact">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="email">
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="message">
+              {% csrf_token %}
+              {{ form.as_p }}              
+              <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
         </form>
       </div>
     </div>
@@ -164,21 +117,3 @@ body {font-family: "Lato", sans-serif}
 {% endblock %}
 
 
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-
-<!-- Footer 
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <a href="https://www.facebook.com/juan.m.macedo" ><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-  <a href="https://www.instagram.com/juanmacedo/" ><i  class="fa fa-instagram w3-hover-opacity"></i></a>
-  <a href="https://twitter.com/macedo_2189?lang=en" > <i  class="fa fa-twitter w3-hover-opacity"></i></a>
-  <a href="https://www.linkedin.com/in/juan-manuel-macedo-almeida-5589a559" ><i  class="fa fa-linkedin w3-hover-opacity"></i></a>
-  <a href="https://github.com/juanmacedoal/" ><i  class="fa fa-github w3-hover-opacity"></i></a>
-
-</footer>
-
-
-</body>
-</html>

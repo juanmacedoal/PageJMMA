@@ -28,6 +28,13 @@ DEBUG = True
 ALLOWED_HOSTS = ['jmma.pythonanywhere.com',
                  '127.0.0.1']
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+DEFAULT_FROM_EMAIL = 'testing@example.com'
+EMAIL_HOST_USER = 'juanmacedoal@hotmail.com'
+EMAIL_HOST_PASSWORD = '21489juanalmeida'
+EMAIL_USE_TLS = False 
+EMAIL_PORT = 1025
+
 
 # Application definition
 
