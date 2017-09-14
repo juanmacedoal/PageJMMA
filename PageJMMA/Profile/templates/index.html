@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+
+<!-- Django load Images 
+  <!DOCTYPE html>
 <html>
     {% load static %}
     <head>
@@ -6,7 +9,7 @@
         <title src=>JMMA</title>
     </head>
 
-  <!-- Django load Images -->
+  
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,14 +23,13 @@ body {font-family: "Lato", sans-serif}
 </style>
 <body>
 
-<!-- Navbar -->
+<!-- Navbar 
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card-2">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="/index/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BACKGROUNDS</a>
     <a href="/curriculum/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CURRICULUM</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOPICS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">CATEGORIES<i class="fa fa-caret-down"></i></button>     
@@ -41,7 +43,7 @@ body {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<!-- Navbar on small screens -->
+<!-- Navbar on small screens 
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#band" class="w3-bar-item w3-button w3-padding-large">BACKGROUNDS</a>
   <a href="#tour" class="w3-bar-item w3-button w3-padding-large">CURRICULUM</a>
@@ -49,10 +51,10 @@ body {font-family: "Lato", sans-serif}
   <a href="#" class="w3-bar-item w3-button w3-padding-large">CATEGORIES</a>
 </div>
 
-<!-- Page content -->
+<!-- Page content 
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <!-- Automatic Slideshow Images -->
+  <!-- Automatic Slideshow Images 
   <div class="mySlides w3-display-container w3-center" class="swipe">
     <img src="{% static "images/android.png" %}"style="width:100%" height="500">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
@@ -78,6 +80,10 @@ body {font-family: "Lato", sans-serif}
         <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
         </div>
   </div>
+
+
+-->
+{% block body %}
   
 
   <!-- The Topics Section -->
@@ -90,7 +96,9 @@ body {font-family: "Lato", sans-serif}
       as the great people we are now.</p>
   </div>
 
-  <!-- The Tour Section -->
+
+
+  <!-- The Tour Section
   <div class="w3-black" id="tour">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
       <h2 class="w3-wide w3-center">CURRICULUM</h2>
@@ -154,28 +162,10 @@ body {font-family: "Lato", sans-serif}
         </div>
       </div>
     </div>
-    </div>
+    </div> -->
 
+    <hr>
 
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-    </div>
-  </div>
 
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
@@ -229,12 +219,14 @@ function myMap() {
 }
 </script>
 
+{% endblock %}
+
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
-<!-- Footer -->
+<!-- Footer 
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
   <a href="https://www.facebook.com/juan.m.macedo" ><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
   <a href="https://www.instagram.com/juanmacedo/" ><i  class="fa fa-instagram w3-hover-opacity"></i></a>

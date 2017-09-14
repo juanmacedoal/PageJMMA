@@ -25,7 +25,8 @@ SECRET_KEY = 'h7n96f)&j1_l9mhwm&1szrxc*3#!vwfeh2rzb$@nxf)%7s7dl$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jmma.pythonanywhere.com',
+                 '127.0.0.1']
 
 
 # Application definition
