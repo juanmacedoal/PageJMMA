@@ -8,6 +8,8 @@ urlpatterns = [
     url(r'^videos/$', views.VideosPageView.as_view()),
     url(r'^languages/$', views.LanguagesPageView.as_view()),
     url(r'^articles/$', views.ArticlesPageView.as_view()),
-    url(r'^curriculum/$', views.CurriculumPageView.as_view(), name='curriculum')
+    url(r'^curriculum/$', views.email, name='curriculum'),
+    url(r'^/$', views.HomePageView.as_view()),
+
   
 ]

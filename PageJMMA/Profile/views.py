@@ -1,10 +1,16 @@
 from django.views.generic import TemplateView
-from Profile.forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError, EmailMessage
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect
-from django.template import Context
+from django.shortcuts import render, redirect, render_to_response
 from django.template.loader import get_template
+from pprint import pprint
+from .forms import ContactForm
+from django.template import RequestContext, Context
+
+pprint(globals())
+pprint(locals())
+
+
 
 
 
@@ -28,46 +34,21 @@ class LanguagesPageView(TemplateView):
 class VideosPageView(TemplateView):
     template_name = 'videos.html'
 
-class CurriculumPageView(TemplateView):
-    template_name = 'curriculum.html'
-
-
-def post(self, request, **kwargs):
-    form_class = ContactForm
-
-    # new logic!
-    if request.method == 'POST':
-        form = form_class(data=request.POST)
-
+def email(request):
+        form = ContactForm(request.POST)
         if form.is_valid():
-            contact_name = request.POST.get(
-                'contact'
-            , '')
-            contact_email = request.POST.get(
-                'email'
-            , '')
-            form_content = request.POST.get('message', '')
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message ='From PageJMMA say:' + form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['juanmacedoal@gmail.com'], fail_silently=False)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return HttpResponse('Success! Thank you for your message.')
+        return render(request, "curriculum.html", {'form': form})
 
-            # Email the profile with the 
-            # contact information
-            template = get_template('templates/contact_template.txt')
-            context = Context({
-                'contact_name': contact_name,
-                'contact_email': contact_email,
-                'form_content': form_content,
-            })
-            content = template.render(context)
 
-            email = EmailMessage(
-                "New contact form submission",
-                content,
-                "Your website" +'',
-                ['juanmacedoal@gmail.com'],
-                headers = {'Reply-To': contact_email }
-            )
-            email.send()
-            return redirect('curriculum')
+    
 
-    return render(request, 'PageJMMA/Profile/templates/index.html', {
-        'form': form_class,
-    })
+
+

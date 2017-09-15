@@ -93,7 +93,7 @@
         <i class="fa fa-envelope" style="width:30px"> </i> Email: juanmacedoal@gmail.com<br>
       </div>
       <div class="w3-col m6">
-        <form method="POST" action="" role="form">
+        <form method="post" action="" role="form">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">               
               <input class="w3-input w3-border" type="text" placeholder="Name" required name="contact">
@@ -103,9 +103,11 @@
             </div>
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="message">
-              {% csrf_token %}
-              {{ form.as_p }}              
-              <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                {% csrf_token %}
+                {{ form.as_p }}   
+              <div class="form-actions">
+                <button class="w3-button w3-black w3-section w3-right" type="submit">Send</button>
+              </div>        
         </form>
       </div>
     </div>

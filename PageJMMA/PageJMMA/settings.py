@@ -28,12 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['jmma.pythonanywhere.com',
                  '127.0.0.1']
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
-DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = 'juanmacedoal@hotmail.com'
-EMAIL_HOST_PASSWORD = '21489juanalmeida'
-EMAIL_USE_TLS = False 
-EMAIL_PORT = 1025
+
 
 
 # Application definition
@@ -45,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Profile'
+    'Profile',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = '18443390manuel'
+EMAIL_HOST_USER = 'juanmacedoal@gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
