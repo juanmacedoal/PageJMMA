@@ -1,122 +1,131 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
-{% block tab1 %} ARTICLES {% endblock%}
+{% block tab1 %} ARTICLES {% endblock%} 
 
-{% block tab2 %}  {% endblock%}
+{% block tab2 %} {% endblock%} 
 
-{% block tab3 %}  {% endblock%}
+{% block tab3 %} {% endblock%}
 
-{% load static %}
+{% load static %} 
 
 {% block body %}
 
-  <!-- Page content -->
+<!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px" id="content">
-  
 
-  <!-- The Topics Section -->
-<div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-    <div class="w3-half">
-        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
-            <h2 class="w3-wide"><img src="{% static "/images/languages.jpg" %}" width="70%" height="%70"></h2>
-            <p class="w3-opacity"><i>10 Most Popular Programming Languages Today<a href="/languages_article/" ></i></p>
-            <p class="w3-justify">Programmers are in high demand these days--their fluency in coding language is invaluable. 
-                Knowing various programming languages is a no-brainer for engineers, but a basic understanding of the languages
-                can benefit anyone, even if you're not looking to become a master coder. Grasping some general understanding of
-                coding can help you make the right hires for your business needs, communicate better with the engineers on your
-                team, and prevent any awkward misunderstandings (Ruby isn't a gem, and Java isn't an excellent cup of coffee). 
-                Plus, with the high salaries earned for coding, you might want to consider it for a future career move! 
-                So what do you need to know?<a href="/languages_article/"></p>
-                
-            <p>Here are the 10 most popular programming languages:
-                <a href="/languages_article/" >
+
+    <!-- The Topics Section -->
+    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+                <h2 class="w3-wide"><img src="{% static "/images/languages.jpg" %}" width="70%" height="%70"></h2>
+                <p class="w3-opacity"><i>10 Most Popular Programming Languages Today<a href="{% url 'pri' %}?value=1" ></i></p>
+                <p class="w3-justify">Programmers are in high demand these days--their fluency in coding language is invaluable. Knowing various
+                    programming languages is a no-brainer for engineers, but a basic understanding of the languages can benefit
+                    anyone, even if you're not looking to become a master coder. Grasping some general understanding of coding
+                    can help you make the right hires for your business needs, communicate better with the engineers on your
+                    team, and prevent any awkward misunderstandings (Ruby isn't a gem, and Java isn't an excellent cup of
+                    coffee). Plus, with the high salaries earned for coding, you might want to consider it for a future career
+                    move! So what do you need to know?
+                    <a href="{% url 'pri' %}?value=1"></p>
+
+                <p>Here are the 10 most popular programming languages:
+                    <a href="{% url 'pri' %}?value=1">
                     <i class="fa fa-external-link w3-hover-opacity">
                     </i>
                 </a>
-            </p>
-          </div>
-    </div>
-    <div class="w3-half">
-        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
-            <h2 class="w3-wide"><img src="{% static "/images/frameworks2017.png" %}" width="62%" height="%70"></h2>
-            <p class="w3-opacity"><i>7 Best Frameworks For Web Development in 2017<a href="/languages_article/"></i></p>
-            <p class="w3-justify">Most of modern web developers have own list of frameworks and libraries which make their
-               work faster, more efficient and convenient. These are the tools they are used to work with and like. But 
-               building an edge over others necessitates every self-respecting programmer to be aware of latest web development
-                technologies, new web application frameworks and libraries and implement them. A successful and productive 
-                developer has to be fast, reliable and use best practices to save time on things that can be automated. 
-                Deadlines matter for business. In this article I will discuss some web development trends in 2017, specifically 
-                the most popular web frameworks of the year, some of their features and their pros and cons. Hopefully this will 
-                help influence what to choose for practice and work.<a href="/languages_article/"></p>
-                
-            <p>Here are the 7 most popular programming frameworks:
-                <a href="/languages_article/" >
+                </p>
+            </div>
+        </div>
+        <div class="w3-half">
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+                <h2 class="w3-wide"><img src="{% static "/images/frameworks2017.png" %}" width="62%" height="%70"></h2>
+                <p class="w3-opacity">
+                    <i>7 Best Frameworks For Web Development in 2017
+                    <a href="https://gearheart.io/blog/7-best-frameworks-for-web-development-in-2017/">
+                </i>
+                </p>
+                <p class="w3-justify">Most of modern web developers have own list of frameworks and libraries which make their work faster, more
+                    efficient and convenient. These are the tools they are used to work with and like. But building an edge
+                    over others necessitates every self-respecting programmer to be aware of latest web development technologies,
+                    new web application frameworks and libraries and implement them. A successful and productive developer
+                    has to be fast, reliable and use best practices to save time on things that can be automated. Deadlines
+                    matter for business. In this article I will discuss some web development trends in 2017, specifically
+                    the most popular web frameworks of the year, some of their features and their pros and cons. Hopefully
+                    this will help influence what to choose for practice and work.
+                    <a href="https://gearheart.io/blog/7-best-frameworks-for-web-development-in-2017/"></p>
+
+                <p>Here are the 7 most popular programming frameworks:
+                    <a href="https://gearheart.io/blog/7-best-frameworks-for-web-development-in-2017/">
                     <i class="fa fa-external-link w3-hover-opacity">
                     </i>
                 </a>
-            </p>
-          </div>
-    </div>
-  </div>
-<hr>
-  <!-- The Tour Section -->
-  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-      <div class="w3-half">
-          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
-              <h2 class="w3-wide"><img src="{% static "/images/programmingbeginner.jpg" %}" width="40%" height="%50"></h2>
-              <p class="w3-opacity"><i>What Programming Language Should a Beginner Learn in 2017?<a href="/languages_article/" ></i></p>
-              <p class="w3-justify">It’s not news that STEM talents are in great demand and are paid well. Online postings for software jobs 
-                across the U.S. grew 31% from 2007 to 2012 - nearly 3x faster than overall job postings. The US Bureau of Labor Statistics 
-                estimates software developer jobs to continue to grow at 22% from 2012~2022, with a median pay of $100,080 for software app 
-                developers as of May 2016.
-                  
-                  If you’re looking to learn how to code, the sheer number of programming languages may be overwhelming – what language should 
-                  you indeed learn? This article hopes to give you some pointers by comparing the salary, popularity, and prospective future 
-                  associated with different programming languages.<a href="/languages_article/"></p>
-                  
-              <p>Here are the 10 most popular programming languages:
-                  <a href="/languages_article/" >
-                      <i class="fa fa-external-link w3-hover-opacity">
-                      </i>
-                  </a>
-              </p>
+                </p>
             </div>
-      </div>
-      <div class="w3-half">
-          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
-              <h2 class="w3-wide"><img src="{% static "/images/python.png" %}" width="62%" height="%70"></h2>
-              <p class="w3-opacity"><i>How I Learned Python Programming Language<a href="/languages_article/"></i></p>
-              <p class="w3-justify">I had taken several programming classes in college (C, C++, and Java) but nothing really serious. 
-                I’m not a Computer Science major and I’ve only programmed professionally for the last year.
-                  
-                  I didn’t really like the low-level work involved with C/C++. Things like pointers, memory
-                  management, and other concepts were difficult for me to grasp — much less effectively
-                  use. Java, as my first programming class in school, didn’t make any sense. I had never used
-                  an object-oriented language before and object-oriented programming (OOP) concepts gave me fits.
-                  
-                  These problems while learning to program left a bad taste in my mouth for programming in general. 
-                  I never learned a language well enough to feel comfortable using it, much less
-                  actually enjoy programming. Then, I heard about Python on a computer forum and noticed several 
-                  other mentions of the language at other sites around the Internet. People
-                  were talking about how great the language was for personal projects and how versatile it
-                  was. I decided to give programming one more try and see if Python was the language for
-                  me.<a href="/languages_article/"></p>
-                  
-              <p>Here are the 7 most popular programming frameworks:
-                  <a href="/languages_article/" >
-                      <i class="fa fa-external-link w3-hover-opacity">
-                      </i>
-                  </a>
-              </p>
-            </div>
-      </div>
+        </div>
     </div>
 
-  
- 
-<!-- End Page Content -->
+    <hr>
+    <!-- The Tour Section -->
+   
+    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+                <h2 class="w3-wide"><img src="{% static "/images/programmingbeginner.jpg" %}" width="40%" height="%50"></h2>
+                <p class="w3-opacity"><i>What Programming Language Should a Beginner Learn in 2017?
+                    <a href="https://www.codementor.io/codementorteam/beginner-programming-language-job-salary-community-7s26wmbm6">
+                    </i>
+                </p>
+                <p class="w3-justify">It’s not news that STEM talents are in great demand and are paid well. Online postings for software jobs
+                    across the U.S. grew 31% from 2007 to 2012 - nearly 3x faster than overall job postings. The US Bureau
+                    of Labor Statistics estimates software developer jobs to continue to grow at 22% from 2012~2022, with
+                    a median pay of $100,080 for software app developers as of May 2016. If you’re looking to learn how to
+                    code, the sheer number of programming languages may be overwhelming – what language should you indeed
+                    learn? This article hopes to give you some pointers by comparing the salary, popularity, and prospective
+                    future associated with different programming languages.
+                    <a href="https://www.codementor.io/codementorteam/beginner-programming-language-job-salary-community-7s26wmbm6"></p>
+
+                <p>Here are the 10 most popular programming languages:
+                    <a href="https://www.codementor.io/codementorteam/beginner-programming-language-job-salary-community-7s26wmbm6">
+                      <i class="fa fa-external-link w3-hover-opacity">
+                      </i>
+                  </a>
+                </p>
+            </div>
+        </div>
+        <div class="w3-half">
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="articles">
+                <h2 class="w3-wide"><img src="{% static "/images/python.png" %}" width="62%" height="%70"></h2>
+                <p class="w3-opacity"><i>How I Learned Python Programming Language
+                    <a href="https://www.codementor.io/codyjackson891/how-i-learned-python-programming-language-b0t4aqcsi">
+                    </i>
+                </p>
+                <p class="w3-justify">I had taken several programming classes in college (C, C++, and Java) but nothing really serious. I’m not
+                    a Computer Science major and I’ve only programmed professionally for the last year. I didn’t really like
+                    the low-level work involved with C/C++. Things like pointers, memory management, and other concepts were
+                    difficult for me to grasp — much less effectively use. Java, as my first programming class in school,
+                    didn’t make any sense. I had never used an object-oriented language before and object-oriented programming
+                    (OOP) concepts gave me fits. These problems while learning to program left a bad taste in my mouth for
+                    programming in general. I never learned a language well enough to feel comfortable using it, much less
+                    actually enjoy programming. Then, I heard about Python on a computer forum and noticed several other
+                    mentions of the language at other sites around the Internet. People were talking about how great the
+                    language was for personal projects and how versatile it was. I decided to give programming one more try
+                    and see if Python was the language for me.
+                    <a href="https://www.codementor.io/codyjackson891/how-i-learned-python-programming-language-b0t4aqcsi"></p>
+
+                <p>Here are the 7 most popular programming frameworks:
+                    <a href="https://www.codementor.io/codyjackson891/how-i-learned-python-programming-language-b0t4aqcsi">
+                      <i class="fa fa-external-link w3-hover-opacity">
+                      </i>
+                  </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- End Page Content -->
 </div>
 
 {% endblock %}
-
-
