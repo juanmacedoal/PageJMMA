@@ -10,14 +10,30 @@ from django.template import RequestContext, Context
 pprint(globals())
 pprint(locals())
 
-
-
-
-
 # Create your views here.
-class HomePageView(TemplateView):
-    def get(self, request, **kwargs):
-        return render(request, 'index.html', context=None)
+def emailHome(request):
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = 'PageJMMA '  + from_email + '   ' + form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['juanmacedoal@gmail.com'], fail_silently=False)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        return render(request, "index.html", {'form': form})
+
+def email(request):
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = 'PageJMMA '  + from_email + '   ' + form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['juanmacedoal@gmail.com'], fail_silently=False)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        return render(request, "curriculum.html", {'form': form})
 
 class ProjectsPageView(TemplateView):
     template_name = 'projects.html'
@@ -33,20 +49,6 @@ class LanguagesPageView(TemplateView):
 
 class VideosPageView(TemplateView):
     template_name = 'videos.html'
-
-def email(request):
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message ='From PageJMMA say:' + form.cleaned_data['message']
-            try:
-                send_mail(subject, message, from_email, ['juanmacedoal@gmail.com'], fail_silently=False)
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return HttpResponse('Success! Thank you for your message.')
-        return render(request, "curriculum.html", {'form': form})
-
 
     
 
