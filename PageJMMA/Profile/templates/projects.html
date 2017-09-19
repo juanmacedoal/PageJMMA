@@ -1,20 +1,24 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block tab1 %} PROJECTS {% endblock%}
 
 {% block tab2 %}  {% endblock%}
 
 {% block tab3 %}  {% endblock%}
 
-{% load static %}
+{% block tab4 %} PROJECTS {% endblock%}
 
-  
+{% block tab5 %}  {% endblock%}
+
+{% block tab6 %}  {% endblock%}
 
 {% block body %}
 
   <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px" id="content">
-  
+
 
   <!-- The Topics Section -->
 <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
@@ -23,9 +27,9 @@
             <h2 class="w3-wide"><img src="{% static "/images/github.png" %}" width="30%" height="%30"></h2>
             <p class="w3-opacity"><i>Restaurant<a href="https://github.com/juanmacedoal/Restaurant" ></i></p>
             <p class="w3-center">Bills, orders, tables orders, register waiters, cashiers and inventory.
-                
+
                  <a href="https://github.com/juanmacedoal/Restaurant"></p>
-                
+
             <p>Java:
                 <a href="https://github.com/juanmacedoal/Restaurant" >
                     <i class="fa fa-external-link w3-hover-opacity">
@@ -38,11 +42,11 @@
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="projects">
             <h2 class="w3-wide"><img src="{% static "/images/github.png" %}" width="30%" height="%30"></h2>
             <p class="w3-opacity"><i>DoTask<a href="https://github.com/juanmacedoal/DoTask"></i></p>
-            <p class="w3-center">App created to help the users to write, create, mark done and more tools 
+            <p class="w3-center">App created to help the users to write, create, mark done and more tools
               to their task
-                
+
                  <a href="https://github.com/juanmacedoal/DoTask"></p>
-                
+
             <p>TypeScript Ionic:
                 <a href="https://github.com/juanmacedoal/DoTask" >
                     <i class="fa fa-external-link w3-hover-opacity">
@@ -62,7 +66,7 @@
               <h2 class="w3-wide"><img src="{% static "/images/github.png" %}" width="30%" height="%30"></h2>
               <p class="w3-opacity"><i>PerfectShipping<a href="https://github.com/juanmacedoal/PerfectShipping" ></i></p>
               <p class="w3-center">A shipping app to save data of the shipping through a QR.<a href="https://github.com/juanmacedoal/PerfectShipping"></p>
-                  
+
               <p>Android studio Java:
                   <a href="https://github.com/juanmacedoal/PerfectShipping" >
                       <i class="fa fa-external-link w3-hover-opacity">
@@ -76,7 +80,7 @@
               <h2 class="w3-wide"><img src="{% static "/images/github.png" %}" width="30%" height="%30"></h2>
               <p class="w3-opacity"><i>PageJMMA<a href="https://github.com/juanmacedoal/PageJMMA"></i></p>
               <p class="w3-center">The code of this page is available here.<a href="https://github.com/juanmacedoal/PageJMMA"></p>
-                  
+
               <p>Djando and python
                   <a href="https://github.com/juanmacedoal/PageJMMA" >
                       <i class="fa fa-external-link w3-hover-opacity">
@@ -91,5 +95,3 @@
 </div>
 
 {% endblock %}
-
-

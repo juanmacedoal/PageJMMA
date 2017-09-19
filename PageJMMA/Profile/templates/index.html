@@ -1,18 +1,29 @@
 {% extends 'base.html' %}
 
+{% block tab1 %} BACKGROUNDS {% endblock%}
+
+{% block tab2 %} <a href="/curriculum/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CURRICULUM</a>{% endblock%}
+
+{% block tab3 %} <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a> {% endblock%}
+
+{% block tab4 %} BACKGROUNDS {% endblock%}
+
+{% block tab5 %} <a href="/curriculum/" class="w3-bar-item w3-button w3-padding-large">CURRICULUM</a> {% endblock%}
+
+{% block tab6 %} <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a> {% endblock%}
+
 {% load static %}
 
-
 {% block body %}
-  
+
 
   <!-- The Topics Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="content">
     <h2 class="w3-wide"><img src="{% static "/images/logo.jpg" %}" width="30%" height="%30"></h2>
     <p class="w3-opacity"><i>Venezuelan Developer</i></p>
-    <p class="w3-justify">Like a whole bunch of developer in the world I'm just one more, with the 
-      plus that the life i had, make me agil to difficult situations, give me more ideas, more 
-      ways to develop that ideas. All decisions, all failures and all steps we passed defines us 
+    <p class="w3-justify">Like a whole bunch of developer in the world I'm just one more, with the
+      plus that the life i had, make me agil to difficult situations, give me more ideas, more
+      ways to develop that ideas. All decisions, all failures and all steps we passed defines us
       as the great people we are now.</p>
   </div>
 
@@ -31,18 +42,18 @@
         <div class="w3-col m6">
           <form method="POST" action="" role="form">
                 {% csrf_token %}
-                {{ form.as_p }}              
+                {{ form.as_p }}
                 <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
           </form>
         </div>
       </div>
     </div>
-  
+
 <!-- End Page Content -->
 </div>
 <!-- Add Google Maps -->
 <div id="googleMap" style="height:400px;" class="w3-grayscale-max">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125549.02138144325!2d-66.9604061535986!3d10.468552911150889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C+Capital+District!5e0!3m2!1sen!2sve!4v1504814188903" 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125549.02138144325!2d-66.9604061535986!3d10.468552911150889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C+Capital+District!5e0!3m2!1sen!2sve!4v1504814188903"
         width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
         </iframe>
 </div>
@@ -64,4 +75,3 @@ function myMap() {
 </script>
 
 {% endblock %}
-
