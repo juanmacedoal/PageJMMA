@@ -1,0 +1,40 @@
+@import "../../assets/styles/styles.scss";
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.title {
+  color: $titles-white;
+  font-family: $font-title;
+}
+
+.title-header{
+  color: $titles-white;
+  display: block;
+  font-family: $font-title;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.title-pages{
+  font-family: $font-title;
+  border-bottom-style: double;
+  border-top-style: double;
+
+}
+
+mat-toolbar{
+  background-color: $header-black;
+}
+
+
+
+
+
